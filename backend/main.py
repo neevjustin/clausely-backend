@@ -26,7 +26,7 @@ app = FastAPI(
 # Allow frontend access
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # ← Set your frontend domain in prod
+    allow_origins=["https://clauselyai.netlify.app"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

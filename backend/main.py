@@ -64,8 +64,8 @@ async def analyze_tc(data: AnalyzeRequest):
         - Avoid jargon, legal terms, and long phrases.
         - Do NOT use markdown, formatting, or explanations.
         - Do NOT include "you", "your", "we", etc.
-        - Only return clean, raw JSON. No intro or code blocks.
-
+        - Only return clean, raw JSON. No intro or code blocks. Return anything in the green, red, warnings and summary - don't leave any blank. Even If the input doesnt match, return all those but something showing input validation to the user. 
+        - the frontend breaks if any of the content in json is empty so return something, Even if it is input validation.
         T&C:
         '''{data.text}'''
         """
